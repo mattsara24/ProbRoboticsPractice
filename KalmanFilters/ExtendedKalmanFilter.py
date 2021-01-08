@@ -66,8 +66,6 @@ class ExendedKalmanFilter(object):
         self.x = self.x + K @ y
         self.P = (np.eye(len(self.x)) - K @ J) @ self.P
 
-
-
     def filter(self, u, z):
         self.predict(u)
         self.update(z)
